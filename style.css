@@ -16,7 +16,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
+    margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -372,11 +372,11 @@ textarea {
 
 html {
     box-sizing: border-box;
-    background: url('img/bg.png') center center repeat; */
+    background: url('./img/bg.png') center center repeat; */
     
 }
 body {
-    font-family: 'Exo 2', 'Open-Sans', sans-serif;
+    font-family: 'Exo 2', sans-serif;
 }
 /* .backgr {
     background: url('img/bg.png') center center repeat;
@@ -417,15 +417,29 @@ body {
     min-height: 480px;
     
     border:4px solid #1698D9;
-    border-radius: 0 2% 2% 2%;
+    border-radius: 10px;
     
-    
-    background: linear-gradient(135deg, transparent 45px, #F2F2F2 0) left;
-    /* background-size: 100% 100%;
-    background-repeat: no-repeat; */
+    /* background-color: #f2f2f2; */
+    background: linear-gradient(135deg, transparent 30px, #F2F2F2 0) left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     margin:0 40px;
     margin-bottom: 16px;
+    
 }
+/* пытаюсь срезать уголок карточки */
+ /* .card::before{
+    border-left: 4px solid #1698D9;
+    width: 45px;
+    height: 70px;
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    left: 14px;
+    top: 3px;
+    background: transparent;
+
+}  */
 
 /* стили для разных состояний карточек */
 /* .card:hover {
@@ -441,26 +455,32 @@ body {
 
 } */
 
-
-
 .card_content {
     /* наполнение карточки */
     display: flex;
     justify-content:center;
     align-items: flex-start;
     flex-direction: column;
-    padding-left: 50px;
-    /* background-color: #F2F2F2; */
     
 
+    /* padding-left: 44px; */
+    /* background-color: #F2F2F2; */
+    /* border:4px solid transparent; */
 }
-
+.card_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    /* padding-left: 44px; */
+    margin: 0 auto;
+    width: 220px;
+}
 .card_title{
 /* заголовок над именем карточки - Сказочное заморскаое яство */
     font-size: 16px;
     color: #666;
     padding: 18px 0 18px;
-    text-align: center;
 }
 .card_name {
 /* Нямушка, главное название */
@@ -475,27 +495,30 @@ body {
 .card_text {
 /* описание кол-ва порций */
     font-size: 14px;
+    color: #666;
     padding-top: 15px;
     line-height: 1.2;
 }
-.card_wight {
+.card_weight {
 /* кружочек 5кг в углу */
 }
 .card_cat {
 /* фотка кота */
     width: 320px;
-    height: 290px;
-    background-image: url(/img/cat.png);
-    background-size:100%;
+    height: 291px;
+    background-image: url(./img/cat.png);
+    background-size:120%;
     background-repeat: no-repeat;
-    background-position: -20px 0px;
+    background-position: -25px 15px;
+
+    border-radius: 4px;
 }
 .card_bait {
     position: relative;
     text-align: center;
     color:white;
+    padding-bottom: 16px;
 }
-
 .buy_link {
     color: #22A7E9;
     text-decoration: 2px underline dashed;
